@@ -1,0 +1,792 @@
+*********************
+Thread Number - 1
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, -ts_rank(ts_mean(rank(ts_decay_linear(rank(scl12_sentiment), 120)), 8), 250), -1)
+*Failure Infomation*:
+Sharpe of 0.05 is below cutoff of 1.58.
+Fitness of 0.01 is below cutoff of 1.
+Sub-universe Sharpe of -0.11 is below cutoff of 0.02.
+IS ladder Sharpe of -0.53 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.2
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, min(rank(ts_delta(beta_last_30_days_spy, 30)*ts_mean(scl12_alltype_typevec, 120)), sign(ts_covariance(rank(scl12_alltype_typevec), group_neutralize(beta_last_90_days_spy, subindustry), 60))), -1)
+*Warning*:
+Your simulation probably took too much resource.
+Vital Warning Exit.
+No.3
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_corr(rank(ts_delta(beta_last_30_days_spy, 180)), rank(unsystematic_risk_last_30_days/unsystematic_risk_last_90_days), 5), -1)
+*Failure Infomation*:
+Sharpe of -0.36 is below cutoff of 1.58.
+Fitness of -0.12 is below cutoff of 1.
+Sub-universe Sharpe of -0.4 is below cutoff of -0.16.
+IS ladder Sharpe of 0.06 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.4
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, rank(rank(ts_delay(-ts_delta(systematic_risk_last_60_days, 60), 8))), -1)
+*Failure Infomation*:
+Sharpe of 0.04 is below cutoff of 1.58.
+Fitness of 0.01 is below cutoff of 1.
+Sub-universe Sharpe of -0.19 is below cutoff of 0.02.
+IS ladder Sharpe of -0.51 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.5
+*Alpha*:
+log(ts_max(snt_buzz**2/scl12_buzz, 120))
+*Failure Infomation*:
+Sharpe of -0.24 is below cutoff of 1.58.
+Fitness of -0.07 is below cutoff of 1.
+IS ladder Sharpe of 0.69 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.6
+*Alpha*:
+group_neutralize(0.2208*scl12_buzz + 0.7792*snt_buzz, industry)
+*Failure Infomation*:
+Sharpe of 1.07 is below cutoff of 1.58.
+Fitness of 0.40 is below cutoff of 1.
+IS ladder Sharpe of 1.56 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+ts_sum(0.39022*scl12_buzz + 0.60978*snt_buzz + 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days, 6)
+*Failure Infomation*:
+Sharpe of 0.83 is below cutoff of 1.58.
+Fitness of 0.66 is below cutoff of 1.
+Weight concentration 43.90% is above cutoff of 10% on 2/21/2013.
+Sub-universe Sharpe of 0.34 is below cutoff of 0.36.
+IS ladder Sharpe of 1.22 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days + group_neutralize(0.2208*scl12_buzz + 0.7792*snt_buzz, industry), -1)
+*Failure Infomation*:
+Sharpe of 0.63 is below cutoff of 1.58.
+Fitness of 0.40 is below cutoff of 1.
+IS ladder Sharpe of 1.29 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.9
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz + 1.20788*systematic_risk_last_30_days + 0.79212*systematic_risk_last_60_days, -1)
+*Failure Infomation*:
+Sharpe of 0.60 is below cutoff of 1.58.
+Fitness of 0.39 is below cutoff of 1.
+IS ladder Sharpe of 1.32 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.10
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz + 1.20788*systematic_risk_last_30_days + 0.79212*systematic_risk_last_60_days, -1)
+*Warning*:
+Unexpected character ')' near "_days, -1))"
+Vital Warning Exit.
+No.11
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz + (scl12_buzz + snt_social_value)*(-0.22185*correlation_last_60_days_spy + correlation_last_60_days_spy/correlation_last_90_days_spy - 0.77815*correlation_last_90_days_spy), -1)
+*Warning*:
+Incompatible unit for input at index 1, expected "Unit[]", found "Unit[CSPrice:1,CSShare:1]"
+*Failure Infomation*:
+Sharpe of 0.13 is below cutoff of 1.58.
+Fitness of 0.03 is below cutoff of 1.
+Sub-universe Sharpe of -0.17 is below cutoff of 0.06.
+IS ladder Sharpe of 0.19 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.12
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 1.17066*scl12_buzz + 1.82934*snt_buzz + 1.20788*systematic_risk_last_30_days + 0.79212*systematic_risk_last_60_days, -1)
+*Failure Infomation*:
+Sharpe of 0.67 is below cutoff of 1.58.
+Fitness of 0.45 is below cutoff of 1.
+IS ladder Sharpe of 1.38 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+
+*********************
+Thread Number - 2
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+ts_mean(snt_value/scl12_sentiment, 180)/scl12_alltype_typevec
+*Warning*:
+WorldQuant BRAIN is experiencing some difficulties. Please contact support if this problem persists.
+Vital Warning Exit.
+No.2
+*Alpha*:
+ts_covariance(beta_last_60_days_spy, -snt_social_volume + systematic_risk_last_60_days, 60)
+Trying to Fix Stuck Program
+*Warning*:
+Incompatible unit for input at index 1, expected "Unit[CSPrice:1,CSShare:1]", found "Unit[]"
+*Failure Infomation*:
+Sharpe of 0.32 is below cutoff of 1.58.
+Fitness of 0.12 is below cutoff of 1.
+Sub-universe Sharpe of -0.18 is below cutoff of 0.14.
+IS ladder Sharpe of 1.21 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.3
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_decay_linear(beta_last_30_days_spy, 21)*ts_delay(snt_value, 2), -1)
+*Failure Infomation*:
+Sharpe of -0.08 is below cutoff of 1.58.
+Fitness of -0.02 is below cutoff of 1.
+Weight concentration 29.61% is above cutoff of 10% on 4/19/2011.
+IS ladder Sharpe of -0.40 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.4
+*Alpha*:
+ts_covariance(rank(abs(ts_delta(0.7181*scl12_sentiment + 0.2819*snt_value, 6))/ts_delay(ts_delta(beta_last_30_days_spy/beta_last_60_days_spy, 10), 7)), rank(ts_covariance(rank(-beta_last_60_days_spy**2*beta_last_90_days_spy), rank(ts_std_dev(rank(snt_social_value), 120)), 4)), 7)
+Trying to Fix Stuck Program
+*Failure Infomation*:
+Sharpe of 0.40 is below cutoff of 1.58.
+Fitness of 0.07 is below cutoff of 1.
+IS ladder Sharpe of 0.61 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.5
+*Alpha*:
+ts_corr(rank(ts_mean(ts_mean(inverse(beta_last_60_days_spy), 5), 60)), rank(ts_std_dev(ts_corr(beta_last_60_days_spy + beta_last_90_days_spy/beta_last_30_days_spy, max(scl12_buzz, 0.99306*systematic_risk_last_60_days + 0.00694*systematic_risk_last_90_days), 9), 5)), 2) + ts_decay_linear(ts_std_dev(ts_mean(ts_mean(snt_value, 6), 6), 180), 10)
+Trying to Fix Stuck Program
+Execution Time Out. Exit.
+No.6
+*Alpha*:
+correlation_last_30_days_spy*rating/correlation_last_90_days_spy
+*Failure Infomation*:
+Sharpe of -0.34 is below cutoff of 1.58.
+Fitness of -0.06 is below cutoff of 1.
+Weight is too strongly concentrated or too few instruments are assigned weight.
+IS ladder Sharpe of -0.09 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_sum(rank(snt_social_value), 6), -1)
+*Failure Infomation*:
+Sharpe of 0.24 is below cutoff of 1.58.
+Fitness of 0.07 is below cutoff of 1.
+IS ladder Sharpe of -0.18 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_sum(snt_buzz_ret**4, 5), -1)
+*Failure Infomation*:
+Sharpe of 0.47 is below cutoff of 1.58.
+Fitness of 0.43 is below cutoff of 1.
+Weight concentration 49.88% is above cutoff of 10% on 4/14/2011.
+IS ladder Sharpe of 0.65 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.9
+*Alpha*:
+0.78044*scl12_buzz + 1.21956*snt_buzz + 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days
+*Failure Infomation*:
+Sharpe of 1.21 is below cutoff of 1.58.
+Fitness of 0.59 is below cutoff of 1.
+Weight concentration 48.23% is above cutoff of 10% on 2/13/2013.
+IS ladder Sharpe of 1.47 is below cutoff of 1.58 for ladder year 3: 2/16/2021бн2/17/2018.
+No.10
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz + rank(0.70532*systematic_risk_last_30_days + 0.29468*systematic_risk_last_60_days), -1)
+*Failure Infomation*:
+Sharpe of 0.64 is below cutoff of 1.58.
+Fitness of 0.44 is below cutoff of 1.
+IS ladder Sharpe of 1.22 is below cutoff of 1.58 for ladder year 3: 2/16/2021бн2/17/2018.
+No.11
+*Alpha*:
+0.39022*scl12_buzz + 0.60978*snt_buzz + max(0.39022*scl12_buzz + 0.60978*snt_buzz, 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days)
+*Failure Infomation*:
+Sharpe of 1.27 is below cutoff of 1.58.
+Fitness of 0.68 is below cutoff of 1.
+Weight concentration 48.60% is above cutoff of 10% on 2/13/2013.
+IS ladder Sharpe of 1.36 is below cutoff of 1.58 for ladder year 3: 2/16/2021бн2/17/2018.
+
+*********************
+Thread Number - 3
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_std_dev(ts_delta(scl12_alltype_typevec, 10), 120), -1)
+*Warning*:
+WorldQuant BRAIN is experiencing some difficulties. Please contact support if this problem persists.
+Vital Warning Exit.
+No.2
+*Alpha*:
+(rank(ts_corr(correlation_last_60_days_spy, systematic_risk_last_60_days/systematic_risk_last_30_days, 250)) + ts_decay_linear(scl12_alltype_typevec*snt_buzz/scl12_buzz, 120))*ts_delay(group_neutralize(scl12_alltype_typevec + scl12_sentiment/snt_value, industry), 7)/ts_max(sign(ts_std_dev(ts_delta(scl12_sentiment, 9), 5)), 15)
+*Warning*:
+WorldQuant BRAIN is experiencing some difficulties. Please contact support if this problem persists.
+Vital Warning Exit.
+No.3
+*Alpha*:
+ts_sum(rank(snt_social_value), 6)
+*Failure Infomation*:
+Sharpe of 0.74 is below cutoff of 1.58.
+Fitness of 0.31 is below cutoff of 1.
+IS ladder Sharpe of 0.63 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.4
+*Alpha*:
+ts_delta(ts_rank(log(snt_social_volume), 5), 10)
+*Warning*:
+Incompatible unit for input at index 0, expected "Unit[]", found "Unit[CSPrice:1,CSShare:1]"
+*Failure Infomation*:
+Sharpe of 0.06 is below cutoff of 1.58.
+Fitness of 0 is below cutoff of 1.
+Sub-universe Sharpe of -0.21 is below cutoff of 0.03.
+IS ladder Sharpe of -1.02 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.5
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_mean(ts_sum(snt_buzz_ret**4, 5), 120), -1)
+*Failure Infomation*:
+Sharpe of 0.20 is below cutoff of 1.58.
+Fitness of 0.08 is below cutoff of 1.
+Weight concentration 42.03% is above cutoff of 10% on 4/18/2011.
+IS ladder Sharpe of 0.97 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.6
+*Alpha*:
+ts_sum(ts_mean(snt_buzz_ret*unsystematic_risk_last_90_days/unsystematic_risk_last_60_days, 120), 6)
+*Failure Infomation*:
+Sharpe of -0.01 is below cutoff of 1.58.
+Fitness of -0 is below cutoff of 1.
+Weight concentration 49.99% is above cutoff of 10% on 7/18/2017.
+IS ladder Sharpe of -0.15 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, snt_buzz_ret, -1)
+*Failure Infomation*:
+Sharpe of 0.02 is below cutoff of 1.58.
+Fitness of 0 is below cutoff of 1.
+Weight concentration 50.00% is above cutoff of 10% on 5/30/2018.
+IS ladder Sharpe of -0.07 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_sum(snt_buzz_ret**4, 5), -1)
+*Failure Infomation*:
+Sharpe of 0.47 is below cutoff of 1.58.
+Fitness of 0.43 is below cutoff of 1.
+Weight concentration 49.88% is above cutoff of 10% on 4/14/2011.
+IS ladder Sharpe of 0.65 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.9
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.2208*scl12_buzz + 0.7792*snt_buzz, -1)
+*Failure Infomation*:
+Sharpe of 0.84 is below cutoff of 1.58.
+Fitness of 0.61 is below cutoff of 1.
+IS ladder Sharpe of 1.16 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.10
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz + min(ts_sum(snt_buzz/scl12_buzz, 180), correlation_last_90_days_spy), -1)
+*Failure Infomation*:
+Sharpe of -0.08 is below cutoff of 1.58.
+Fitness of -0.02 is below cutoff of 1.
+Sub-universe Sharpe of -0.05 is below cutoff of -0.03.
+IS ladder Sharpe of -0.47 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.11
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz + ts_corr(0.39022*scl12_buzz + 0.60978*snt_buzz, 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days, 45), -1)
+Trying to Fix Stuck Program
+*Failure Infomation*:
+Sharpe of 0.63 is below cutoff of 1.58.
+Fitness of 0.36 is below cutoff of 1.
+IS ladder Sharpe of 1.04 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+
+*********************
+Thread Number - 4
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_corr(rank(snt_value), rank(rank(snt_buzz)), 9) + beta_last_60_days_spy*group_neutralize(unsystematic_risk_last_60_days + rank(unsystematic_risk_last_90_days), subindustry)/beta_last_30_days_spy, -1)
+*Failure Infomation*:
+Sharpe of 0.09 is below cutoff of 1.58.
+Fitness of 0.02 is below cutoff of 1.
+IS ladder Sharpe of 0.31 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.2
+*Alpha*:
+log(correlation_last_30_days_spy*rating/correlation_last_90_days_spy)
+*Failure Infomation*:
+Sharpe of -0.89 is below cutoff of 1.58.
+Fitness of -0.24 is below cutoff of 1.
+Weight is too strongly concentrated or too few instruments are assigned weight.
+Sub-universe Sharpe of -0.41 is below cutoff of -0.39.
+IS ladder Sharpe of 0.28 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.3
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_corr(-sign(ts_corr(rank(ts_delay(systematic_risk_last_30_days/systematic_risk_last_90_days, 30)), rank(ts_product(systematic_risk_last_90_days, 8)), 9)) + ts_mean(-scl12_sentiment/snt_value + ts_delta(scl12_sentiment, 45), 10), ts_covariance(rank(ts_corr(rank(sign(ts_delta(snt_social_value, 250))), rank(ts_corr(rank(ts_product(correlation_last_60_days_spy, 6)), rank(ts_corr(rank(systematic_risk_last_90_days/systematic_risk_last_30_days), rank(rating), 5)), 15)), 45)), rank(sign(ts_std_dev(ts_mean(correlation_last_30_days_spy, 180), 30))), 8), 180), -1)
+Trying to Fix Stuck Program
+Execution Time Out. Exit.
+No.4
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_mean(-inverse(correlation_last_90_days_spy/correlation_last_30_days_spy), 6), -1)
+Trying to Fix Stuck Program
+Execution Time Out. Exit.
+No.5
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_corr(ts_std_dev(ts_decay_linear(snt_value, 2), 45), ts_delta(ts_rank(snt_buzz, 30), 15), 30), -1)
+*Failure Infomation*:
+Sharpe of 0.21 is below cutoff of 1.58.
+Fitness of 0.06 is below cutoff of 1.
+Weight concentration 49.98% is above cutoff of 10% on 1/9/2012.
+IS ladder Sharpe of 0.86 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.6
+*Alpha*:
+0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days
+*Failure Infomation*:
+Sharpe of 0.66 is below cutoff of 1.58.
+Fitness of 0.56 is below cutoff of 1.
+Weight concentration 46.73% is above cutoff of 10% on 2/13/2013.
+IS ladder Sharpe of 1.45 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+log(-correlation_last_30_days_spy)
+*Failure Infomation*:
+Sharpe of -0.17 is below cutoff of 1.58.
+Fitness of -0.04 is below cutoff of 1.
+Turnover of 72% is above cutoff of 70%.
+Weight is too strongly concentrated or too few instruments are assigned weight.
+Sub-universe Sharpe of -0.36 is below cutoff of -0.07.
+IS ladder Sharpe of 0.14 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+ts_sum(ts_sum(rank(snt_social_value), 6), 6)
+*Failure Infomation*:
+Sharpe of 0.70 is below cutoff of 1.58.
+Fitness of 0.29 is below cutoff of 1.
+IS ladder Sharpe of 0.32 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.9
+*Alpha*:
+0.39022*scl12_buzz + 0.60978*snt_buzz + group_neutralize(0.2208*scl12_buzz + 0.7792*snt_buzz, industry)
+*Failure Infomation*:
+Sharpe of 1.05 is below cutoff of 1.58.
+Fitness of 0.40 is below cutoff of 1.
+IS ladder Sharpe of 1.49 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.10
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 1.56088*scl12_buzz + 2.43912*snt_buzz + 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days, -1)
+*Failure Infomation*:
+Sharpe of 0.65 is below cutoff of 1.58.
+Fitness of 0.42 is below cutoff of 1.
+IS ladder Sharpe of 1.32 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+
+*********************
+Thread Number - 5
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, beta_last_90_days_spy + correlation_last_60_days_spy, -1)
+*Failure Infomation*:
+Sharpe of 0.43 is below cutoff of 1.58.
+Fitness of 0.26 is below cutoff of 1.
+IS ladder Sharpe of 0.50 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.2
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, abs(snt_value), -1)
+*Failure Infomation*:
+Sharpe of -0.50 is below cutoff of 1.58.
+Fitness of -0.27 is below cutoff of 1.
+Sub-universe Sharpe of -0.31 is below cutoff of -0.22.
+IS ladder Sharpe of -0.30 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.3
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_corr(rank(group_neutralize(ts_mean(snt_value/scl12_sentiment, 6)/ts_corr(scl12_buzz/snt_buzz, correlation_last_60_days_spy, 60), sector) - rank(ts_rank(scl12_buzz/(snt_buzz*snt_social_value), 15))), rank(ts_corr(rank(systematic_risk_last_90_days), rank(0.94668*scl12_buzz + 0.05332*snt_buzz), 60) + ts_corr(rank(ts_corr(scl12_alltype_typevec, systematic_risk_last_60_days, 5)), rank(rank(snt_social_value)), 180) + ts_delay(ts_rank(abs(snt_buzz_ret), 21), 3)), 60), -1)
+*Warning*:
+WorldQuant BRAIN is experiencing some difficulties. Please contact support if this problem persists.
+Vital Warning Exit.
+No.4
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, -snt_buzz_ret + ts_rank(ts_delta(ts_min(snt_social_volume, 10), 8), 8), -1)
+*Failure Infomation*:
+Sharpe of -0.02 is below cutoff of 1.58.
+Fitness of -0 is below cutoff of 1.
+Weight concentration 50.00% is above cutoff of 10% on 5/30/2018.
+Sub-universe Sharpe of -0.21 is below cutoff of -0.01.
+IS ladder Sharpe of 0.07 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.5
+*Alpha*:
+ts_delay(systematic_risk_last_30_days/systematic_risk_last_90_days + unsystematic_risk_last_30_days - ts_delta(snt_buzz, 2), 9)
+*Failure Infomation*:
+Sharpe of 0.52 is below cutoff of 1.58.
+Fitness of 0.15 is below cutoff of 1.
+Weight concentration 35.12% is above cutoff of 10% on 2/27/2013.
+IS ladder Sharpe of 1.25 is below cutoff of 1.58 for ladder year 3: 2/16/2021бн2/17/2018.
+No.6
+*Alpha*:
+rating*ts_product(unsystematic_risk_last_30_days, 21)
+*Failure Infomation*:
+Sharpe of -0.48 is below cutoff of 1.58.
+Fitness of -0.42 is below cutoff of 1.
+Weight is too strongly concentrated or too few instruments are assigned weight.
+Sub-universe Sharpe of -0.32 is below cutoff of -0.21.
+IS ladder Sharpe of 0.16 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+correlation_last_30_days_spy*rating/correlation_last_90_days_spy + 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days
+*Failure Infomation*:
+Sharpe of -0.20 is below cutoff of 1.58.
+Fitness of -0.03 is below cutoff of 1.
+Weight is too strongly concentrated or too few instruments are assigned weight.
+IS ladder Sharpe of 0.23 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz, -1)
+*Failure Infomation*:
+Sharpe of 0.84 is below cutoff of 1.58.
+Fitness of 0.61 is below cutoff of 1.
+IS ladder Sharpe of 1.16 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.9
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz + ts_mean(scl12_sentiment, 6), -1)
+*Failure Infomation*:
+Sharpe of 0.72 is below cutoff of 1.58.
+Fitness of 0.48 is below cutoff of 1.
+Sub-universe Sharpe of 0.01 is below cutoff of 0.31.
+IS ladder Sharpe of 0.88 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+
+*********************
+Thread Number - 6
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+rank(ts_mean(ts_mean(ts_sum(0.57705*systematic_risk_last_30_days + 0.42295*systematic_risk_last_90_days, 250), 15), 120)) + ts_corr(rank(ts_delay(rank(ts_corr(rank(snt_value/scl12_sentiment), rank(scl12_alltype_typevec), 30)), 4)), rank(ts_covariance(-rank(snt_buzz) + ts_decay_linear(scl12_alltype_typevec, 3), ts_corr(rank(ts_mean(scl12_buzz, 180)), rank(ts_corr(snt_value, 0.15532*scl12_buzz + 0.84468*snt_buzz, 10)), 8), 15)), 7)
+*Warning*:
+WorldQuant BRAIN is experiencing some difficulties. Please contact support if this problem persists.
+Vital Warning Exit.
+No.2
+*Alpha*:
+0.39022*scl12_buzz + 0.60978*snt_buzz + 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days
+*Failure Infomation*:
+Sharpe of 1.13 is below cutoff of 1.58.
+Fitness of 0.60 is below cutoff of 1.
+Weight concentration 49.03% is above cutoff of 10% on 2/13/2013.
+IS ladder Sharpe of 1.46 is below cutoff of 1.58 for ladder year 3: 2/16/2021бн2/17/2018.
+No.3
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_mean(correlation_last_60_days_spy + scl12_buzz, 250), -1)
+*Failure Infomation*:
+Sharpe of -0.18 is below cutoff of 1.58.
+Fitness of -0.05 is below cutoff of 1.
+IS ladder Sharpe of 0.02 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.4
+*Alpha*:
+ts_sum(2*snt_social_volume*ts_corr(scl12_sentiment, snt_social_value, 60), 6)
+Trying to Fix Stuck Program
+*Failure Infomation*:
+Sharpe of -0.11 is below cutoff of 1.58.
+Fitness of -0.02 is below cutoff of 1.
+Sub-universe Sharpe of -0.08 is below cutoff of -0.05.
+IS ladder Sharpe of -0.31 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.5
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, group_neutralize(rating*snt_social_value, subindustry), -1)
+*Failure Infomation*:
+Sharpe of 0.02 is below cutoff of 1.58.
+Fitness of 0 is below cutoff of 1.
+Weight concentration 13.69% is above cutoff of 10% on 12/7/2011.
+Sub-universe Sharpe of -0.18 is below cutoff of 0.01.
+IS ladder Sharpe of -0.14 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.6
+*Alpha*:
+0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days
+*Failure Infomation*:
+Sharpe of 0.66 is below cutoff of 1.58.
+Fitness of 0.56 is below cutoff of 1.
+Weight concentration 46.73% is above cutoff of 10% on 2/13/2013.
+IS ladder Sharpe of 1.45 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, rank(correlation_last_30_days_spy*rating/correlation_last_90_days_spy), -1)
+*Failure Infomation*:
+Sharpe of 0.24 is below cutoff of 1.58.
+Fitness of 0.07 is below cutoff of 1.
+Weight concentration 16.18% is above cutoff of 10% on 4/12/2011.
+IS ladder Sharpe of 1.21 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.39022*scl12_buzz + 0.60978*snt_buzz, -1)
+*Failure Infomation*:
+Sharpe of 0.84 is below cutoff of 1.58.
+Fitness of 0.61 is below cutoff of 1.
+IS ladder Sharpe of 1.16 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+
+*********************
+Thread Number - 7
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_mean(ts_product(inverse(beta_last_60_days_spy)/snt_social_volume**5, 9), 120), -1)
+*Warning*:
+Incompatible unit for input at index 0, expected "Unit[]", found "Unit[CSPrice:1,CSShare:1]"
+*Failure Infomation*:
+Sharpe of 0.35 is below cutoff of 1.58.
+Fitness of 0.35 is below cutoff of 1.
+Weight concentration 50.00% is above cutoff of 10% on 7/7/2017.
+Sub-universe Sharpe of -0.05 is below cutoff of 0.15.
+IS ladder Sharpe of 0.72 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.2
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_rank(ts_mean(snt_social_volume, 120), 6), -1)
+*Failure Infomation*:
+Sharpe of 0.37 is below cutoff of 1.58.
+Fitness of 0.10 is below cutoff of 1.
+Sub-universe Sharpe of 0.07 is below cutoff of 0.16.
+IS ladder Sharpe of 1.24 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.3
+*Alpha*:
+sign(scl12_alltype_typevec)*ts_rank(snt_buzz_ret, 2)
+*Warning*:
+Unexpected character '1' near "2_alltype"
+Vital Warning Exit.
+No.4
+*Alpha*:
+ts_std_dev(ts_corr(rank(rating), rank(snt_social_volume), 2), 2)
+Did not take any action.
+No.5
+*Alpha*:
+ts_sum(correlation_last_60_days_spy/correlation_last_30_days_spy, 60)
+*Failure Infomation*:
+Sharpe of 0.11 is below cutoff of 1.58.
+Fitness of 0.03 is below cutoff of 1.
+Sub-universe Sharpe of -0.02 is below cutoff of 0.05.
+IS ladder Sharpe of -0.62 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.6
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, snt_buzz_ret*unsystematic_risk_last_90_days/unsystematic_risk_last_60_days, -1)
+*Failure Infomation*:
+Sharpe of 0.01 is below cutoff of 1.58.
+Fitness of 0 is below cutoff of 1.
+Weight concentration 50.00% is above cutoff of 10% on 5/25/2018.
+IS ladder Sharpe of -0.16 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+ts_mean(snt_buzz_ret**4, 120)
+*Failure Infomation*:
+Sharpe of -0.46 is below cutoff of 1.58.
+Fitness of -0.25 is below cutoff of 1.
+IS ladder Sharpe of 0.76 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+0.39022*scl12_buzz + 0.60978*snt_buzz + 1.20788*systematic_risk_last_30_days + 0.79212*systematic_risk_last_60_days
+*Failure Infomation*:
+Sharpe of 0.98 is below cutoff of 1.58.
+Fitness of 0.55 is below cutoff of 1.
+Weight concentration 49.38% is above cutoff of 10% on 2/13/2013.
+IS ladder Sharpe of 1.39 is below cutoff of 1.58 for ladder year 3: 2/16/2021бн2/17/2018.
+No.9
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.78044*scl12_buzz + 1.21956*snt_buzz, -1)
+*Failure Infomation*:
+Sharpe of 0.84 is below cutoff of 1.58.
+Fitness of 0.61 is below cutoff of 1.
+IS ladder Sharpe of 1.16 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.10
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.78044*scl12_buzz + 1.21956*snt_buzz + 1.20788*systematic_risk_last_30_days + 0.79212*systematic_risk_last_60_days, -1)
+*Failure Infomation*:
+Sharpe of 0.66 is below cutoff of 1.58.
+Fitness of 0.44 is below cutoff of 1.
+IS ladder Sharpe of 1.37 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+
+*********************
+Thread Number - 8
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_decay_linear(ts_delay(ts_product(systematic_risk_last_60_days - unsystematic_risk_last_90_days/unsystematic_risk_last_60_days, 10), 45), 2), -1)
+*Failure Infomation*:
+Sharpe of 0.36 is below cutoff of 1.58.
+Fitness of 0.19 is below cutoff of 1.
+Weight concentration 26.58% is above cutoff of 10% on 9/16/2011.
+Sub-universe Sharpe of 0.04 is below cutoff of 0.16.
+IS ladder Sharpe of -0.51 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.2
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, group_neutralize(sign(rank(ts_covariance(rank(ts_max(scl12_alltype_typevec, 10)), rank(ts_max(correlation_last_30_days_spy, 30)), 9)) - ts_rank(ts_rank(abs(scl12_buzz), 6), 30)), industry), -1)
+*Warning*:
+Your simulation probably took too much resource.
+Vital Warning Exit.
+No.3
+*Alpha*:
+ts_corr(rank(ts_rank(ts_max(ts_max(ts_corr(rank(scl12_sentiment), rank(scl12_buzz), 15), 10), 7), 4)), rank(rank(rank(ts_delay(snt_buzz_ret, 45))) + ts_decay_linear(ts_delta(ts_std_dev(scl12_sentiment/snt_value, 5), 21), 7)), 250)
+Trying to Fix Stuck Program
+Execution Time Out. Exit.
+No.4
+*Alpha*:
+ts_corr(correlation_last_30_days_spy + scl12_sentiment, systematic_risk_last_60_days/systematic_risk_last_30_days, 4)
+Trying to Fix Stuck Program
+Execution Time Out. Exit.
+No.5
+*Alpha*:
+correlation_last_30_days_spy + scl12_alltype_typevec + ts_corr(rank(unsystematic_risk_last_60_days/unsystematic_risk_last_90_days), rank(ts_decay_linear(correlation_last_90_days_spy/correlation_last_30_days_spy, 4)), 15)
+*Failure Infomation*:
+Sharpe of 0.34 is below cutoff of 1.58.
+Fitness of 0.09 is below cutoff of 1.
+Sub-universe Sharpe of -0.08 is below cutoff of 0.15.
+IS ladder Sharpe of 0.66 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.6
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, -correlation_last_30_days_spy, -1)
+*Failure Infomation*:
+Sharpe of -0.02 is below cutoff of 1.58.
+Fitness of -0 is below cutoff of 1.
+Sub-universe Sharpe of -0.05 is below cutoff of -0.01.
+IS ladder Sharpe of 1.16 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, group_neutralize(0.39022*scl12_buzz + 0.60978*snt_buzz + 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days, industry), -1)
+*Failure Infomation*:
+Sharpe of 0.62 is below cutoff of 1.58.
+Fitness of 0.40 is below cutoff of 1.
+IS ladder Sharpe of 1.55 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, snt_buzz_ret**4, -1)
+*Failure Infomation*:
+Sharpe of -0.47 is below cutoff of 1.58.
+Fitness of -0.46 is below cutoff of 1.
+Weight concentration 49.31% is above cutoff of 10% on 9/16/2011.
+IS ladder Sharpe of -1.47 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.9
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 1.17066*scl12_buzz + 1.82934*snt_buzz + 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days, -1)
+*Failure Infomation*:
+Sharpe of 0.66 is below cutoff of 1.58.
+Fitness of 0.43 is below cutoff of 1.
+IS ladder Sharpe of 1.35 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+
+*********************
+Thread Number - 9
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, group_neutralize(ts_sum(snt_social_volume, 4), industry), -1)
+*Failure Infomation*:
+Sharpe of 0.02 is below cutoff of 1.58.
+Fitness of 0 is below cutoff of 1.
+Sub-universe Sharpe of -0.22 is below cutoff of 0.01.
+IS ladder Sharpe of -1.12 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.2
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_mean(snt_buzz_ret*unsystematic_risk_last_90_days/unsystematic_risk_last_60_days, 120), -1)
+*Failure Infomation*:
+Sharpe of -0.47 is below cutoff of 1.58.
+Fitness of -0.48 is below cutoff of 1.
+Weight concentration 49.99% is above cutoff of 10% on 3/10/2016.
+Sub-universe Sharpe of -0.8 is below cutoff of -0.2.
+IS ladder Sharpe of -0.03 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.3
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, rank(correlation_last_30_days_spy + beta_last_90_days_spy/beta_last_30_days_spy), -1)
+*Failure Infomation*:
+Sharpe of -0.26 is below cutoff of 1.58.
+Fitness of -0.08 is below cutoff of 1.
+Sub-universe Sharpe of -0.68 is below cutoff of -0.11.
+IS ladder Sharpe of -1.73 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.4
+*Alpha*:
+ts_rank(ts_delta(ts_min(abs(ts_sum(ts_rank(correlation_last_90_days_spy, 250), 21)), 5), 21), 250)
+*Failure Infomation*:
+Sharpe of -0.05 is below cutoff of 1.58.
+Fitness of -0.01 is below cutoff of 1.
+IS ladder Sharpe of -0.06 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.5
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, group_neutralize(0.2208*scl12_buzz + 0.7792*snt_buzz, industry), -1)
+*Failure Infomation*:
+Sharpe of 0.82 is below cutoff of 1.58.
+Fitness of 0.58 is below cutoff of 1.
+IS ladder Sharpe of 1.13 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.6
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, correlation_last_30_days_spy/correlation_last_90_days_spy + snt_buzz, -1)
+*Failure Infomation*:
+Sharpe of 0.42 is below cutoff of 1.58.
+Fitness of 0.21 is below cutoff of 1.
+IS ladder Sharpe of 0.56 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, snt_buzz + ts_delay(-correlation_last_30_days_spy, 6), -1)
+*Failure Infomation*:
+Sharpe of 0.58 is below cutoff of 1.58.
+Fitness of 0.34 is below cutoff of 1.
+IS ladder Sharpe of 1.10 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, log(log(correlation_last_30_days_spy*rating/correlation_last_90_days_spy)), -1)
+*Failure Infomation*:
+Sharpe of 0.02 is below cutoff of 1.58.
+Fitness of 0 is below cutoff of 1.
+Weight concentration 12.50% is above cutoff of 10% on 4/14/2011.
+IS ladder Sharpe of 1.52 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.9
+*Alpha*:
+rank(scl12_sentiment)
+*Failure Infomation*:
+Sharpe of 0.12 is below cutoff of 1.58.
+Fitness of 0.01 is below cutoff of 1.
+Turnover of 79.02% is above cutoff of 70%.
+Sub-universe Sharpe of -0.39 is below cutoff of 0.05.
+IS ladder Sharpe of -0.41 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.10
+*Alpha*:
+0.78044*scl12_buzz + 1.21956*snt_buzz - 0.60394*systematic_risk_last_30_days - 0.39606*systematic_risk_last_60_days
+*Failure Infomation*:
+Sharpe of 0.15 is below cutoff of 1.58.
+Fitness of 0.03 is below cutoff of 1.
+Weight concentration 48.21% is above cutoff of 10% on 2/13/2013.
+IS ladder Sharpe of 0.87 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+
+*********************
+Thread Number - 10
+*********************
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
+No.1
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, snt_buzz + ts_delay(-correlation_last_30_days_spy, 6), -1)
+*Failure Infomation*:
+Sharpe of 0.58 is below cutoff of 1.58.
+Fitness of 0.34 is below cutoff of 1.
+IS ladder Sharpe of 1.10 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.2
+*Alpha*:
+scl12_sentiment/(snt_value*ts_mean(correlation_last_30_days_spy, 45))
+*Failure Infomation*:
+Sharpe of -0.45 is below cutoff of 1.58.
+Fitness of -0.17 is below cutoff of 1.
+Turnover of 85.06% is above cutoff of 70%.
+Weight concentration 50.00% is above cutoff of 10% on 10/28/2020.
+IS ladder Sharpe of -0.36 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.3
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, ts_sum(snt_buzz_ret**4, 5), -1)
+*Failure Infomation*:
+Sharpe of 0.47 is below cutoff of 1.58.
+Fitness of 0.43 is below cutoff of 1.
+Weight concentration 49.88% is above cutoff of 10% on 4/14/2011.
+IS ladder Sharpe of 0.65 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.4
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, -ts_corr(rank(ts_corr(ts_corr(rank(-correlation_last_60_days_spy/correlation_last_90_days_spy), rank(ts_delay(beta_last_90_days_spy, 4)), 120)*ts_delta(snt_social_value + unsystematic_risk_last_60_days/unsystematic_risk_last_30_days, 6), group_neutralize(scl12_alltype_typevec + snt_social_value - ts_delta(unsystematic_risk_last_30_days, 120), subindustry), 7)), rank(-ts_rank(correlation_last_90_days_spy*snt_buzz*ts_decay_linear(scl12_buzz, 60)/scl12_buzz, 2)), 120) + ts_mean(unsystematic_risk_last_30_days/unsystematic_risk_last_90_days - ts_delay(snt_buzz, 1), 60) - ts_sum(max(ts_mean(ts_delta(scl12_buzz, 5), 9), ts_delta(ts_delay(snt_buzz_ret, 21), 6)), 21), -1)
+*Warning*:
+WorldQuant BRAIN is experiencing some difficulties. Please contact support if this problem persists.
+Vital Warning Exit.
+No.5
+*Alpha*:
+sign(1)
+Did not take any action.
+No.6
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, log(0.39022*scl12_buzz + 0.60978*snt_buzz + 0.60394*systematic_risk_last_30_days + 0.39606*systematic_risk_last_60_days), -1)
+*Failure Infomation*:
+Sharpe of 0.30 is below cutoff of 1.58.
+Fitness of 0.13 is below cutoff of 1.
+IS ladder Sharpe of 0.76 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.7
+*Alpha*:
+ts_mean(snt_buzz_ret, 120)
+*Failure Infomation*:
+Sharpe of -0.13 is below cutoff of 1.58.
+Fitness of -0.06 is below cutoff of 1.
+Weight concentration 50.00% is above cutoff of 10% on 2/22/2016.
+IS ladder Sharpe of -0.02 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.8
+*Alpha*:
+trade_when(ts_mean(returns, 20) - 0.01, 0.78044*scl12_buzz + 1.21956*snt_buzz + 1.20788*systematic_risk_last_30_days + 0.79212*systematic_risk_last_60_days, -1)
+*Failure Infomation*:
+Sharpe of 0.66 is below cutoff of 1.58.
+Fitness of 0.44 is below cutoff of 1.
+IS ladder Sharpe of 1.37 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+No.9
+*Alpha*:
+0.39022*scl12_buzz + 0.60978*snt_buzz + ts_mean(ts_mean(snt_buzz/scl12_buzz, 30) + ts_min(snt_value, 9), 6)
+*Failure Infomation*:
+Sharpe of 0.54 is below cutoff of 1.58.
+Fitness of 0.16 is below cutoff of 1.
+Sub-universe Sharpe of 0.18 is below cutoff of 0.23.
+IS ladder Sharpe of 0.96 is below cutoff of 1.58 for ladder year 2: 2/16/2021бн2/17/2019.
+

@@ -1,0 +1,1 @@
+Setting: Region: USA; Delay: 1; Universe: 3000; Neutralization: Sector; Decay: 10; Truncation: 0.05
